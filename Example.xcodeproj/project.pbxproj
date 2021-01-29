@@ -23,6 +23,7 @@
 		31BAE65525C42F1C00C66EE3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		31BAE65725C42F1C00C66EE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31BAE66A25C431C800C66EE3 /* Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Example.entitlements; sourceTree = "<group>"; };
+		31BAE67F25C4369E00C66EE3 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		61FA3ADFBD3BA7D794C4E998 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		FD9E9234C6E9AEDDE00CD76B /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +112,7 @@
 		31BAE66125C430EF00C66EE3 /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				31BAE67F25C4369E00C66EE3 /* .swiftlint.yml */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -266,6 +268,7 @@
 				31BAE64725C42F1B00C66EE3 /* Sources */,
 				31BAE64825C42F1B00C66EE3 /* Frameworks */,
 				31BAE64925C42F1B00C66EE3 /* Resources */,
+				31BAE68025C436C700C66EE3 /* Run Script SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -321,6 +324,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		31BAE68025C436C700C66EE3 /* Run Script SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" --config \"$SRCROOT/Example/Config/.swiftlint.yml\"\n";
+		};
 		68B385D4FA6200C8B36E0E56 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
