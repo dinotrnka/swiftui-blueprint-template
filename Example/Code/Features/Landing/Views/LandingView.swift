@@ -9,7 +9,33 @@ import SwiftUI
 
 struct LandingView: View {
   var body: some View {
-    Text("Hello there friend!")
+    VStack {
+      Rectangle()
+        .fill(CustomColor.background)
+        .frame(width: 200, height: 100)
+
+      Spacer()
+
+      Rectangle()
+        .fill(CustomColor.primary)
+        .frame(width: 200, height: 100)
+
+      Spacer()
+
+      Rectangle()
+        .fill(CustomColor.text)
+        .frame(width: 200, height: 100)
+
+      Spacer()
+
+      Rectangle()
+        .fill(CustomColor.secondary)
+        .frame(width: 200, height: 100)
+
+      Spacer()
+  
+      Text("Hello there friend!")
+    }
   }
 }
 
