@@ -11,6 +11,14 @@ struct LandingView: View {
   var body: some View {
     ScrollView {
       VStack {
+        Text(Configuration.get(.environment))
+        Text(Configuration.get(.baseUrl))
+        Text(Configuration.shared.segmentWriteKey)
+      }
+
+      Spacer()
+
+      VStack {
         Group {
           Text("ErrorMessage.Default".localized)
             .font(CustomFont.secretWinter(size: 20))
