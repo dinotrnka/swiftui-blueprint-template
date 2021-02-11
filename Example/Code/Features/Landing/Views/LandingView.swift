@@ -12,12 +12,12 @@ struct LandingView: View {
     ScrollView {
       VStack {
         Group {
-          Text("Hello there friend!")
+          Text("ErrorMessage.Default".localized)
             .font(CustomFont.secretWinter(size: 20))
 
           Spacer()
 
-          Text("Hello there friend!")
+          Text("ErrorMessage.NoInternet".localized)
             .font(CustomFont.oldLondon(size: 20))
 
           Spacer()
