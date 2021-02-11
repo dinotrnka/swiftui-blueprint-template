@@ -30,5 +30,4 @@ enum RawColor: UInt {
   case maroon = 0xD96868
   case silverChalice = 0xABA79B
   case copperCrayola = 0xDC8E6C
-  
 }

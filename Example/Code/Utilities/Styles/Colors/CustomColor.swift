@@ -25,6 +25,13 @@ class CustomColor {
     dynamic(light: .green, dark: .green)
   }
 
+  static var gradient: Gradient {
+    Gradient(colors: [
+      dynamic(light: .tumbleweed, dark: .tumbleweed),
+      dynamic(light: .africanViolet, dark: .africanViolet),
+      dynamic(light: .liberty, dark: .liberty)
+    ])
+  }
 }
 
 private extension CustomColor {

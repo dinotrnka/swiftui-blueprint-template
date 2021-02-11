@@ -9,32 +9,42 @@ import SwiftUI
 
 struct LandingView: View {
   var body: some View {
-    VStack {
-      Rectangle()
-        .fill(CustomColor.background)
-        .frame(width: 200, height: 100)
+    ScrollView {
+      VStack {
+        Spacer()
 
-      Spacer()
+        Rectangle()
+          .fill(LinearGradient(
+            gradient: CustomColor.gradient,
+            startPoint: .bottom,
+            endPoint: .top
+          ))
+          .frame(width: 200, height: 100)
 
-      Rectangle()
-        .fill(CustomColor.primary)
-        .frame(width: 200, height: 100)
+        Spacer()
 
-      Spacer()
+        Rectangle()
+          .fill(CustomColor.background)
+          .frame(width: 200, height: 100)
 
-      Rectangle()
-        .fill(CustomColor.text)
-        .frame(width: 200, height: 100)
+        Spacer()
 
-      Spacer()
+        Rectangle()
+          .fill(CustomColor.text)
+          .frame(width: 200, height: 100)
 
-      Rectangle()
-        .fill(CustomColor.secondary)
-        .frame(width: 200, height: 100)
+        Spacer()
 
-      Spacer()
-  
-      Text("Hello there friend!")
+        Rectangle()
+          .fill(CustomColor.primary)
+          .frame(width: 200, height: 100)
+
+        Spacer()
+
+        Rectangle()
+          .fill(CustomColor.secondary)
+          .frame(width: 200, height: 100)
+      }
     }
   }
 }

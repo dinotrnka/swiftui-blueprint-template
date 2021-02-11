@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension UIColor {
-  
+
   convenience init(hex: UInt, alpha: CGFloat = 1) {
     self.init(
       red: CGFloat((hex & 0xFF0000) >> 16) / 255.0,
@@ -17,7 +17,7 @@ extension UIColor {
       alpha: alpha
     )
   }
-  
+
   static func dynamic(light: UInt, lightAlpha: CGFloat = 1, dark: UInt, darkAlpha: CGFloat = 1) -> UIColor {
     return UIColor { trait -> UIColor in
       switch trait.userInterfaceStyle {
