@@ -46,5 +46,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Secret Winter.ttf</string>
+		<string>WRESTLEMANIA.ttf</string>
+		<string>OldLondon.ttf</string>
+	</array>
 </dict>
 </plist>

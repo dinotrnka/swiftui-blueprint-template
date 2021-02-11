@@ -11,8 +11,25 @@ struct LandingView: View {
   var body: some View {
     ScrollView {
       VStack {
-        Spacer()
+        Group {
+          Text("Hello there friend!")
+            .font(CustomFont.secretWinter(size: 20))
 
+          Spacer()
+
+          Text("Hello there friend!")
+            .font(CustomFont.oldLondon(size: 20))
+
+          Spacer()
+
+          Text("Hello there friend!")
+            .font(CustomFont.wrestlemania(size: 20))
+        }
+      }
+
+      Spacer()
+
+      Group {
         Rectangle()
           .fill(LinearGradient(
             gradient: CustomColor.gradient,
