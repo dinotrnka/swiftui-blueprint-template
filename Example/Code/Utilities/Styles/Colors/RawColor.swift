@@ -8,7 +8,6 @@
 import SwiftUI
 
 enum RawColor: UInt {
-
   case white = 0xFFFFFF
   case black = 0x000000
   case lightBeige = 0xF4F3EF

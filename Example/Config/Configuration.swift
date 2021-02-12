@@ -25,7 +25,6 @@ enum Environment: String {
   case production
 }
 
-
 class Configuration {
 
   static let shared = Configuration()
