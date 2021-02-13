@@ -8,15 +8,15 @@
 import Foundation
 
 extension String {
-  var localized: String {
-    return NSLocalizedString(self, comment: "")
-  }
+    var localized: String {
+        return NSLocalizedString(self, comment: "")
+    }
 
-  func localized(arguments: CVarArg...) -> String {
-    return String(format: self.localized, arguments: arguments)
-  }
+    func localized(arguments: CVarArg...) -> String {
+        return String(format: self.localized, arguments: arguments)
+    }
 
-  func trim() -> String {
-    return trimmingCharacters(in: .whitespacesAndNewlines)
-  }
+    func trim() -> String {
+        return trimmingCharacters(in: .whitespacesAndNewlines)
+    }
 }

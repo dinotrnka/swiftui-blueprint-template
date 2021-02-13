@@ -4,8 +4,6 @@
 <dict>
 	<key>BaseUrl</key>
 	<string>$(BASE_URL)</string>
-	<key>Environment</key>
-	<string>$(ENVIRONMENT)</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -21,9 +19,17 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>Environment</key>
+	<string>$(ENVIRONMENT)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Secret Winter.ttf</string>
+		<string>WRESTLEMANIA.ttf</string>
+		<string>OldLondon.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -49,12 +55,6 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Secret Winter.ttf</string>
-		<string>WRESTLEMANIA.ttf</string>
-		<string>OldLondon.ttf</string>
 	</array>
 </dict>
 </plist>
