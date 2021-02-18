@@ -12,3 +12,9 @@ extension UIView {
         shakePublisher.send()
     }
 }
+
+extension Date {
+    var currentTimestamp: Int64 {
+        return Int64(self.timeIntervalSince1970)
+    }
+}

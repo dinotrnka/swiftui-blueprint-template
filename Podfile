@@ -8,5 +8,6 @@ target 'Blueprint' do
   # Pods for Blueprint
 
   pod 'SwiftLint', '~> 0.40.2'
+  pod 'SwiftKeychainWrapper', '~> 3.4'
 
 end

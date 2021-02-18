@@ -8,12 +8,11 @@ struct LandingView: View {
         ScrollView {
 
             NavigationLink(
-              destination: LandingTwoView(),
-              isActive: $navigationActive,
-              label: {
-                Text("Dino Trnka")
-              })
-
+                destination: LandingTwoView(),
+                isActive: $navigationActive,
+                label: {
+                    Text("Dino Trnka")
+                })
             Spacer()
 
             VStack {
