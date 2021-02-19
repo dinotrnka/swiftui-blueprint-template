@@ -10,6 +10,10 @@
 		314BFD2525DEC16100D5E242 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314BFD2425DEC16100D5E242 /* Auth.swift */; };
 		314BFD2A25DEC1D100D5E242 /* JWT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314BFD2925DEC1D100D5E242 /* JWT.swift */; };
 		314BFD3125DEC4B800D5E242 /* KeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314BFD3025DEC4B800D5E242 /* KeychainStorage.swift */; };
+		314BFD3725DEFAA300D5E242 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314BFD3625DEFAA300D5E242 /* API.swift */; };
+		314BFD3B25DF00B200D5E242 /* LandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314BFD3A25DF00B200D5E242 /* LandingViewModel.swift */; };
+		314BFD3F25DF016D00D5E242 /* RedditModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314BFD3E25DF016D00D5E242 /* RedditModel.swift */; };
+		314BFD4325DF286300D5E242 /* RefreshTokenAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314BFD4225DF286300D5E242 /* RefreshTokenAction.swift */; };
 		314E994325D6E95C00B6A332 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314E994225D6E95C00B6A332 /* Extensions.swift */; };
 		314E994725D73D6E00B6A332 /* LandingTwoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314E994625D73D6E00B6A332 /* LandingTwoView.swift */; };
 		314E994D25D7443B00B6A332 /* FeatureToggles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314E994C25D7443B00B6A332 /* FeatureToggles.swift */; };
@@ -24,7 +28,7 @@
 		316C89BC25D548F6003DB0F3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 316C89BE25D548F6003DB0F3 /* Localizable.strings */; };
 		316C89C125D54974003DB0F3 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316C89C025D54974003DB0F3 /* StringExtension.swift */; };
 		316C8A0725D58D73003DB0F3 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316C8A0625D58D73003DB0F3 /* Configuration.swift */; };
-		31BAE64F25C42F1B00C66EE3 /* ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BAE64E25C42F1B00C66EE3 /* ExampleApp.swift */; };
+		31BAE64F25C42F1B00C66EE3 /* BlueprintApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BAE64E25C42F1B00C66EE3 /* BlueprintApp.swift */; };
 		31BAE65325C42F1C00C66EE3 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31BAE65225C42F1C00C66EE3 /* AppIcon.xcassets */; };
 		31BAE65625C42F1C00C66EE3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31BAE65525C42F1C00C66EE3 /* Preview Assets.xcassets */; };
 		31BAE68725C440EC00C66EE3 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BAE68625C440EC00C66EE3 /* RootView.swift */; };
@@ -37,6 +41,10 @@
 		314BFD2425DEC16100D5E242 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		314BFD2925DEC1D100D5E242 /* JWT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWT.swift; sourceTree = "<group>"; };
 		314BFD3025DEC4B800D5E242 /* KeychainStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStorage.swift; sourceTree = "<group>"; };
+		314BFD3625DEFAA300D5E242 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		314BFD3A25DF00B200D5E242 /* LandingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModel.swift; sourceTree = "<group>"; };
+		314BFD3E25DF016D00D5E242 /* RedditModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditModel.swift; sourceTree = "<group>"; };
+		314BFD4225DF286300D5E242 /* RefreshTokenAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshTokenAction.swift; sourceTree = "<group>"; };
 		314E994225D6E95C00B6A332 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		314E994625D73D6E00B6A332 /* LandingTwoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingTwoView.swift; sourceTree = "<group>"; };
 		314E994C25D7443B00B6A332 /* FeatureToggles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureToggles.swift; sourceTree = "<group>"; };
@@ -55,7 +63,7 @@
 		316C89F525D58AB2003DB0F3 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		316C8A0625D58D73003DB0F3 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		31BAE64B25C42F1B00C66EE3 /* Blueprint Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blueprint Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		31BAE64E25C42F1B00C66EE3 /* ExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleApp.swift; sourceTree = "<group>"; };
+		31BAE64E25C42F1B00C66EE3 /* BlueprintApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueprintApp.swift; sourceTree = "<group>"; };
 		31BAE65225C42F1C00C66EE3 /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
 		31BAE65525C42F1C00C66EE3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		31BAE65725C42F1C00C66EE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -82,6 +90,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		314BFD3925DF00A700D5E242 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				314BFD3A25DF00B200D5E242 /* LandingViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		314BFD3D25DF016500D5E242 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				314BFD3E25DF016D00D5E242 /* RedditModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		314BFD4125DF285700D5E242 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				314BFD4225DF286300D5E242 /* RefreshTokenAction.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
 		316C89B325D541B7003DB0F3 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,11 +184,7 @@
 			children = (
 				31BAE66D25C4326400C66EE3 /* Common */,
 				31BAE68925C4410200C66EE3 /* Landing */,
-				31BAE69225C46A2000C66EE3 /* Login */,
-				31BAE69425C46A2B00C66EE3 /* Main */,
 				31BAE68525C440D500C66EE3 /* Root */,
-				31BAE69525C46A2E00C66EE3 /* Settings */,
-				31BAE69325C46A2700C66EE3 /* Signup */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -169,6 +197,7 @@
 				31BAE67625C432BD00C66EE3 /* Styles */,
 				314BFD2925DEC1D100D5E242 /* JWT.swift */,
 				314BFD3025DEC4B800D5E242 /* KeychainStorage.swift */,
+				314BFD3625DEFAA300D5E242 /* API.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -188,8 +217,6 @@
 			children = (
 				31BAE66425C4312A00C66EE3 /* Fonts */,
 				31BAE66525C4313500C66EE3 /* Images */,
-				31BAE66625C4316400C66EE3 /* JSON */,
-				31BAE66725C4316B00C66EE3 /* Videos */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -197,8 +224,8 @@
 		31BAE66325C4310100C66EE3 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				31BAE64E25C42F1B00C66EE3 /* ExampleApp.swift */,
 				31BAE65725C42F1C00C66EE3 /* Info.plist */,
+				31BAE64E25C42F1B00C66EE3 /* BlueprintApp.swift */,
 				316C89BE25D548F6003DB0F3 /* Localizable.strings */,
 			);
 			path = SupportingFiles;
@@ -222,51 +249,13 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-		31BAE66625C4316400C66EE3 /* JSON */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = JSON;
-			sourceTree = "<group>";
-		};
-		31BAE66725C4316B00C66EE3 /* Videos */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Videos;
-			sourceTree = "<group>";
-		};
 		31BAE66D25C4326400C66EE3 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				31BAE66E25C4326E00C66EE3 /* Actions */,
-				31BAE66F25C4327300C66EE3 /* Models */,
-				31BAE67025C4327700C66EE3 /* ViewModels */,
+				314BFD4125DF285700D5E242 /* Actions */,
 				31BAE67125C4327D00C66EE3 /* ViewModifiers */,
-				31BAE67225C4328300C66EE3 /* Views */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		31BAE66E25C4326E00C66EE3 /* Actions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Actions;
-			sourceTree = "<group>";
-		};
-		31BAE66F25C4327300C66EE3 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		31BAE67025C4327700C66EE3 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		31BAE67125C4327D00C66EE3 /* ViewModifiers */ = {
@@ -277,18 +266,11 @@
 			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
-		31BAE67225C4328300C66EE3 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		31BAE67425C432AE00C66EE3 /* EnvironmentObjects */ = {
 			isa = PBXGroup;
 			children = (
-				314E994C25D7443B00B6A332 /* FeatureToggles.swift */,
 				314BFD2425DEC16100D5E242 /* Auth.swift */,
+				314E994C25D7443B00B6A332 /* FeatureToggles.swift */,
 			);
 			path = EnvironmentObjects;
 			sourceTree = "<group>";
@@ -323,6 +305,8 @@
 		31BAE68925C4410200C66EE3 /* Landing */ = {
 			isa = PBXGroup;
 			children = (
+				314BFD3D25DF016500D5E242 /* Models */,
+				314BFD3925DF00A700D5E242 /* ViewModels */,
 				31BAE68A25C4410B00C66EE3 /* Views */,
 			);
 			path = Landing;
@@ -343,34 +327,6 @@
 				31BAE68625C440EC00C66EE3 /* RootView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		31BAE69225C46A2000C66EE3 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		31BAE69325C46A2700C66EE3 /* Signup */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Signup;
-			sourceTree = "<group>";
-		};
-		31BAE69425C46A2B00C66EE3 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		31BAE69525C46A2E00C66EE3 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Settings;
 			sourceTree = "<group>";
 		};
 		31BAE69C25C46BFD00C66EE3 /* Colors */ = {
@@ -543,7 +499,8 @@
 				314BFD3125DEC4B800D5E242 /* KeychainStorage.swift in Sources */,
 				316C89B525D541C7003DB0F3 /* Fonts.swift in Sources */,
 				31BAE68C25C4411600C66EE3 /* LandingView.swift in Sources */,
-				31BAE64F25C42F1B00C66EE3 /* ExampleApp.swift in Sources */,
+				314BFD3F25DF016D00D5E242 /* RedditModel.swift in Sources */,
+				31BAE64F25C42F1B00C66EE3 /* BlueprintApp.swift in Sources */,
 				316C8A0725D58D73003DB0F3 /* Configuration.swift in Sources */,
 				314BFD2A25DEC1D100D5E242 /* JWT.swift in Sources */,
 				314E994725D73D6E00B6A332 /* LandingTwoView.swift in Sources */,
@@ -551,9 +508,12 @@
 				316C89A125D53723003DB0F3 /* RawColor.swift in Sources */,
 				314E994325D6E95C00B6A332 /* Extensions.swift in Sources */,
 				316C89C125D54974003DB0F3 /* StringExtension.swift in Sources */,
+				314BFD4325DF286300D5E242 /* RefreshTokenAction.swift in Sources */,
 				316C89A725D538D4003DB0F3 /* ColorExtension.swift in Sources */,
 				314BFD2525DEC16100D5E242 /* Auth.swift in Sources */,
 				316C89A425D5376F003DB0F3 /* CustomColor.swift in Sources */,
+				314BFD3725DEFAA300D5E242 /* API.swift in Sources */,
+				314BFD3B25DF00B200D5E242 /* LandingViewModel.swift in Sources */,
 				31BAE68725C440EC00C66EE3 /* RootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

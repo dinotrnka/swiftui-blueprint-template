@@ -4,8 +4,16 @@ struct LandingView: View {
 
     @State var navigationActive: Bool = false
 
+    var viewModel: LandingViewModel = LandingViewModel()
+
     var body: some View {
         ScrollView {
+
+            Button("API CALL", action: {
+                viewModel.sendAPICall()
+            })
+
+            Spacer()
 
             NavigationLink(
                 destination: LandingTwoView(),
