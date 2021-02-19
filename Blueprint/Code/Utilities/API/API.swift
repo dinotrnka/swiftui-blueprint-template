@@ -53,24 +53,23 @@ struct APIRequest<Parameters: Encodable, Model: Decodable> {
             }
         }
 
-        var needToRefreshToken = false
-
         if authorized {
+
           if let accessToken = Auth.shared.getAccessToken(),
             Auth.shared.validate(accessToken: accessToken) {
-            request.setValue("Bearer " + accessToken, forHTTPHeaderField: "Authorization")
-          } else {
-            needToRefreshToken = true
-          }
-        }
 
-        if needToRefreshToken, let refreshToken = Auth.shared.getRefreshToken() {
+            request.setValue("Bearer " + accessToken, forHTTPHeaderField: "Authorization")
+            runTask(delegate, request: request, success: successCallback)
+
+          } else if let refreshToken = Auth.shared.getRefreshToken() {
+
             Auth.shared.refreshTokens(refreshToken: refreshToken) { newAccessToken in
                 request.setValue("Bearer " + newAccessToken, forHTTPHeaderField: "Authorization")
                 runTask(delegate, request: request, success: successCallback)
             }
-        } else {
-            runTask(delegate, request: request, success: successCallback)
+
+          }
+
         }
     }
 
