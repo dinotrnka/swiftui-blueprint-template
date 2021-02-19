@@ -4,8 +4,10 @@
 "Common.Cancel" = "Cancel";
 "Common.Continue" = "Continue";
 
-/* ERROR MESSAGES */
-"ErrorMessage.Default" = "Something went wrong.";
+/* API ERROR MESSAGES */
 "ErrorMessage.NoInternet" = "Please check your internet connection.";
-"ErrorMessage.JsonDecoderError" = "Invalid response JSON.";
-"ErrorMessage.AlamofireFailure" = "API request failed.";
+"ErrorMessage.JsonEncoder" = "JSON Encoder error.";
+"ErrorMessage.JsonDecoder" = "JSON Decoder error.";
+"ErrorMessage.RefreshToken" = "Refresh token error.";
+"ErrorMessage.HttpRequest" = "HTTP Request error.";
+"ErrorMessage.HttpResponse" = "HTTP Response error.";

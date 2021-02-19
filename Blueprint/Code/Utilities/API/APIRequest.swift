@@ -11,7 +11,7 @@ struct EmptyRequest: Encodable {}
 struct EmptyResponse: Decodable {}
 
 protocol APIRequestDelegate: class {
-    func onError(message: String)
+    func onError(error: APIError)
 }
 
 struct APIRequest<Parameters: Encodable, Model: Decodable> {
@@ -27,7 +27,7 @@ struct APIRequest<Parameters: Encodable, Model: Decodable> {
         success successCallback: @escaping CompletionHandler
     ) {
         if !NetworkMonitor.shared.isReachable {
-            delegate?.onError(message: "No network connection.")
+            delegate?.onError(error: .noInternet)
             return
         }
 
@@ -35,7 +35,6 @@ struct APIRequest<Parameters: Encodable, Model: Decodable> {
 
         guard let urlComponent = URLComponents(string: url),
               let usableUrl = urlComponent.url else {
-            delegate?.onError(message: "URL Failed!")
             return
         }
 
@@ -48,7 +47,7 @@ struct APIRequest<Parameters: Encodable, Model: Decodable> {
             do {
                 request.httpBody = try JSONEncoder().encode(parameters)
             } catch {
-                delegate?.onError(message: "Request serialization error!")
+                delegate?.onError(error: .jsonEncoder)
             }
         }
 
@@ -65,7 +64,7 @@ struct APIRequest<Parameters: Encodable, Model: Decodable> {
 
         } else {
             guard let refreshToken = Auth.shared.getRefreshToken() else {
-                delegate?.onError(message: "Refresh token error.")
+                delegate?.onError(error: .refreshToken)
                 return
             }
 
@@ -87,14 +86,14 @@ struct APIRequest<Parameters: Encodable, Model: Decodable> {
             defer { task = nil }
 
             if error != nil {
-                delegate?.onError(message: "HTTP Request error!")
+                delegate?.onError(error: .httpRequest)
             } else if
                 let data = data,
                 let response = response as? HTTPURLResponse,
                 response.statusCode == 200 {
                 successCallback(data)
             } else {
-                delegate?.onError(message: "Response failed!")
+                delegate?.onError(error: .httpResponse)
             }
         }
 

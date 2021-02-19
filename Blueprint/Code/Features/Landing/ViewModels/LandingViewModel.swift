@@ -20,7 +20,7 @@ class LandingViewModel {
 }
 
 extension LandingViewModel: APIRequestDelegate {
-    func onError(message: String) {
-        print("API Error dude.", message)
+    func onError(error: APIError) {
+        print("API Error dude.", error.message)
     }
 }

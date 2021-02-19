@@ -40,7 +40,7 @@ struct GetMeAction {
                 )
                 completion(response.data)
             } catch {
-                delegate?.onError(message: "Response decoding error.")
+                delegate?.onError(error: APIError.jsonDecoder)
             }
         }
     }
