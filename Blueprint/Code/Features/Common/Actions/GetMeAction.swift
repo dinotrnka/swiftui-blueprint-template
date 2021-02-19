@@ -30,7 +30,8 @@ struct GetMeAction {
         APIRequest<EmptyRequest, GetMeResponse>.call(
             delegate,
             route: route,
-            method: method
+            method: method,
+            authorized: true
         ) { data in
             do {
                 let response = try JSONDecoder().decode(

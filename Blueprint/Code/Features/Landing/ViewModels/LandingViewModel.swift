@@ -1,15 +1,18 @@
 import Foundation
 
 class LandingViewModel {
-    func sendAPICall() {
-//        guard let refreshToken = Auth.shared.getRefreshToken() else {
-//            return
-//        }
-//
-//        RefreshTokenAction(delegate: self, refreshToken: refreshToken).call { response in
-//            print("Refresh token response")
-//        }
 
+    func refreshToken() {
+        guard let refreshToken = Auth.shared.getRefreshToken() else {
+            return
+        }
+
+        RefreshTokenAction(delegate: self, refreshToken: refreshToken).call { response in
+            print("Refresh token response")
+        }
+    }
+
+    func getMe() {
         GetMeAction(delegate: self).call { response in
             print("GET ME", response)
         }

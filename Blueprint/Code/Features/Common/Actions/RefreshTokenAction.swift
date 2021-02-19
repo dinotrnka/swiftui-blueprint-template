@@ -25,6 +25,7 @@ struct RefreshTokenAction {
             delegate,
             route: route,
             method: method,
+            authorized: false,
             parameters: RefreshTokenRequest(token: refreshToken)
         ) { data in
             do {

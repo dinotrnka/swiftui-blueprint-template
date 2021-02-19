@@ -7,11 +7,21 @@ struct LandingView: View {
     var viewModel: LandingViewModel = LandingViewModel()
 
     var body: some View {
-        ScrollView {
+        VStack {
 
-            Button("API CALL", action: {
-                viewModel.sendAPICall()
+            Spacer()
+
+            Button("Refresh token", action: {
+                viewModel.refreshToken()
             })
+
+            Spacer()
+
+            Button("Get Me", action: {
+                viewModel.getMe()
+            })
+
+            Spacer()
 
 //            Spacer()
 //

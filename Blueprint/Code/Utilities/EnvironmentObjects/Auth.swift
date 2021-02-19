@@ -51,4 +51,16 @@ class Auth: ObservableObject {
 
         return currentTimestamp < expirationTimestamp
     }
+
+    func refreshTokens(refreshToken: String, completion: @escaping (String) -> Void) {
+      RefreshTokenAction(refreshToken: refreshToken).call { response in
+
+        self.setCredentials(
+          accessToken: response.accessToken,
+          refreshToken: response.refreshToken
+        )
+
+        completion(response.accessToken)
+      }
+    }
 }
