@@ -19,3 +19,13 @@ extension Date {
     }
 }
 
+extension URLRequest {
+    mutating func addDefaultHeaders() {
+        self.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        self.addValue("application/json", forHTTPHeaderField: "Accept")
+    }
+
+    mutating func addAuthorizationHeader(accessToken: String) {
+        self.addValue("Bearer " + accessToken, forHTTPHeaderField: "Authorization")
+    }
+}

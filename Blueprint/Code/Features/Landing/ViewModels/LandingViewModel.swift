@@ -8,7 +8,7 @@ class LandingViewModel {
         }
 
         RefreshTokenAction(delegate: self, refreshToken: refreshToken).call { response in
-            print("Refresh token response")
+            print("Refresh token response", response)
         }
     }
 

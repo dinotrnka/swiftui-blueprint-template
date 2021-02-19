@@ -42,8 +42,7 @@ struct APIRequest<Parameters: Encodable, Model: Decodable> {
         var request = URLRequest(url: usableUrl)
 
         request.httpMethod = method.rawValue
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        request.addDefaultHeaders()
 
         if let parameters = parameters {
             do {
@@ -53,23 +52,27 @@ struct APIRequest<Parameters: Encodable, Model: Decodable> {
             }
         }
 
-        if authorized {
+        if !authorized {
+            runTask(delegate, request: request, success: successCallback)
+            return
+        }
 
-          if let accessToken = Auth.shared.getAccessToken(),
-            Auth.shared.validate(accessToken: accessToken) {
+        if let accessToken = Auth.shared.getAccessToken(),
+           Auth.shared.validate(accessToken: accessToken) {
 
-            request.setValue("Bearer " + accessToken, forHTTPHeaderField: "Authorization")
+            request.addAuthorizationHeader(accessToken: accessToken)
             runTask(delegate, request: request, success: successCallback)
 
-          } else if let refreshToken = Auth.shared.getRefreshToken() {
-
-            Auth.shared.refreshTokens(refreshToken: refreshToken) { newAccessToken in
-                request.setValue("Bearer " + newAccessToken, forHTTPHeaderField: "Authorization")
-                runTask(delegate, request: request, success: successCallback)
+        } else {
+            guard let refreshToken = Auth.shared.getRefreshToken() else {
+                delegate?.onError(message: "Refresh token error.")
+                return
             }
 
-          }
-
+            Auth.shared.refreshTokens(refreshToken: refreshToken) { accessToken in
+                request.addAuthorizationHeader(accessToken: accessToken)
+                runTask(delegate, request: request, success: successCallback)
+            }
         }
     }
 
