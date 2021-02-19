@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		312173E125DFDF4A004F6EFD /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312173E025DFDF4A004F6EFD /* NetworkMonitor.swift */; };
 		314BFD2525DEC16100D5E242 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314BFD2425DEC16100D5E242 /* Auth.swift */; };
 		314BFD2A25DEC1D100D5E242 /* JWT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314BFD2925DEC1D100D5E242 /* JWT.swift */; };
 		314BFD3125DEC4B800D5E242 /* KeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314BFD3025DEC4B800D5E242 /* KeychainStorage.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		1B8A75C1FB9379E9CC070743 /* Pods-Example.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.production.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.production.xcconfig"; sourceTree = "<group>"; };
+		312173E025DFDF4A004F6EFD /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		314BFD2425DEC16100D5E242 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		314BFD2925DEC1D100D5E242 /* JWT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWT.swift; sourceTree = "<group>"; };
 		314BFD3025DEC4B800D5E242 /* KeychainStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStorage.swift; sourceTree = "<group>"; };
@@ -90,6 +92,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		312173DF25DFDF40004F6EFD /* API */ = {
+			isa = PBXGroup;
+			children = (
+				314BFD3625DEFAA300D5E242 /* API.swift */,
+				312173E025DFDF4A004F6EFD /* NetworkMonitor.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		314BFD3925DF00A700D5E242 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,12 +203,12 @@
 		31BAE66025C430E700C66EE3 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				312173DF25DFDF40004F6EFD /* API */,
 				31BAE67425C432AE00C66EE3 /* EnvironmentObjects */,
 				31BAE67525C432B900C66EE3 /* Extensions */,
 				31BAE67625C432BD00C66EE3 /* Styles */,
 				314BFD2925DEC1D100D5E242 /* JWT.swift */,
 				314BFD3025DEC4B800D5E242 /* KeychainStorage.swift */,
-				314BFD3625DEFAA300D5E242 /* API.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -509,6 +520,7 @@
 				314E994325D6E95C00B6A332 /* Extensions.swift in Sources */,
 				316C89C125D54974003DB0F3 /* StringExtension.swift in Sources */,
 				314BFD4325DF286300D5E242 /* RefreshTokenAction.swift in Sources */,
+				312173E125DFDF4A004F6EFD /* NetworkMonitor.swift in Sources */,
 				316C89A725D538D4003DB0F3 /* ColorExtension.swift in Sources */,
 				314BFD2525DEC16100D5E242 /* Auth.swift in Sources */,
 				316C89A425D5376F003DB0F3 /* CustomColor.swift in Sources */,

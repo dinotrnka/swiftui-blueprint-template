@@ -22,6 +22,11 @@ struct APIRequest<Parameters: Encodable, Model: Decodable> {
         parameters: Parameters,
         success successCallback: @escaping CompletionHandler
     ) {
+        if !NetworkMonitor.shared.isReachable {
+            delegate?.onError(message: "No network connection.")
+            return
+        }
+
         let url = "https://" + Configuration.get(.baseUrl) + route
 
         guard let urlComponent = URLComponents(string: url),
