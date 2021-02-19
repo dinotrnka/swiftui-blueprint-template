@@ -7,6 +7,9 @@ enum HTTPMethod: String {
     case delete
 }
 
+struct EmptyRequest: Encodable {}
+struct EmptyResponse: Decodable {}
+
 protocol APIRequestDelegate: class {
     func onError(message: String)
 }
@@ -19,7 +22,7 @@ struct APIRequest<Parameters: Encodable, Model: Decodable> {
         _ delegate: APIRequestDelegate? = nil,
         route: String,
         method: HTTPMethod,
-        parameters: Parameters,
+        parameters: Parameters? = nil,
         success successCallback: @escaping CompletionHandler
     ) {
         if !NetworkMonitor.shared.isReachable {
@@ -41,11 +44,12 @@ struct APIRequest<Parameters: Encodable, Model: Decodable> {
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
 
-        do {
-            let jsonData = try JSONEncoder().encode(parameters)
-            request.httpBody = jsonData
-        } catch {
-            delegate?.onError(message: "Request serialization error!")
+        if let parameters = parameters {
+            do {
+                request.httpBody = try JSONEncoder().encode(parameters)
+            } catch {
+                delegate?.onError(message: "Request serialization error!")
+            }
         }
 
         var task: URLSessionDataTask?

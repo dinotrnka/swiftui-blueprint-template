@@ -16,8 +16,9 @@ struct RefreshTokenResponseData: Decodable {
 struct RefreshTokenAction {
     weak var delegate: APIRequestDelegate?
     var refreshToken: String
-    var route: String = "/account/refresh-token"
-    var method: HTTPMethod = .post
+
+    let route: String = "/account/refresh-token"
+    let method: HTTPMethod = .post
 
     func call(completion: @escaping (RefreshTokenResponseData) -> Void) {
         APIRequest<RefreshTokenRequest, RefreshTokenResponse>.call(
@@ -33,7 +34,7 @@ struct RefreshTokenAction {
                 )
                 completion(response.data)
             } catch {
-                print("Response decoding error.")
+                delegate?.onError(message: "Response decoding error.")
             }
         }
     }
