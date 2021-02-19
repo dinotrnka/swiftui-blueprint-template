@@ -53,7 +53,7 @@ class Auth: ObservableObject {
     }
 
     func refreshTokens(refreshToken: String, completion: @escaping (String) -> Void) {
-      RefreshTokenAction(refreshToken: refreshToken).call { response in
+        RefreshTokenAction(parameters: RefreshTokenRequest(token: refreshToken)).call { response in
 
         self.setCredentials(
           accessToken: response.accessToken,

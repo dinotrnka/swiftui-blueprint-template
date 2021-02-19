@@ -1,4 +1,3 @@
-
 /* COMMON */
 "Common.OK" = "OK";
 "Common.Cancel" = "Cancel";
@@ -11,3 +10,21 @@
 "ErrorMessage.RefreshToken" = "Refresh token error.";
 "ErrorMessage.HttpRequest" = "HTTP Request error.";
 "ErrorMessage.HttpResponse" = "HTTP Response error.";
+
+/* LANDING */
+"Landing.SignupButtonTitle" = "Signup";
+"Landing.LoginButtonTitle" = "Login";
+
+/* LOGIN */
+"Login.UsernameField" = "Username";
+"Login.PasswordField" = "Password";
+"Login.LoginButtonTitle" = "Login";
+
+/* SIGNUP */
+"Signup.UsernameTitle" = "Please choose a username.";
+"Signup.UsernameField" = "Username";
+"Signup.PasswordTitle" = "Please enter a password.";
+"Signup.PasswordField" = "Password";
+"Signup.EmailTitle" = "Please enter your email.";
+"Signup.EmailField" = "Email";
+"Signup.ContinueButtonTitle" = "Continue";

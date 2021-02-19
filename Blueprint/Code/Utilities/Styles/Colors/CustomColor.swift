@@ -10,12 +10,20 @@ class CustomColor {
         dynamic(light: .orange)
     }
 
+    static var secondary: Color {
+        dynamic(light: .green)
+    }
+
     static var text: Color {
         dynamic(light: .darkBlue, dark: .red)
     }
 
-    static var secondary: Color {
-        dynamic(light: .green)
+    static var textLight: Color {
+        dynamic(light: .white)
+    }
+
+    static var border: Color {
+        dynamic(light: .lightMidGray)
     }
 
     static var gradient: Gradient {

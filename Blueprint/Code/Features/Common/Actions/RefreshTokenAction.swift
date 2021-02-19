@@ -15,7 +15,7 @@ struct RefreshTokenResponseData: Decodable {
 
 struct RefreshTokenAction {
     weak var delegate: APIRequestDelegate?
-    var refreshToken: String
+    var parameters: RefreshTokenRequest
 
     let route: String = "/account/refresh-token"
     let method: HTTPMethod = .post
@@ -26,7 +26,7 @@ struct RefreshTokenAction {
             route: route,
             method: method,
             authorized: false,
-            parameters: RefreshTokenRequest(token: refreshToken)
+            parameters: parameters
         ) { data in
             do {
                 let response = try JSONDecoder().decode(
