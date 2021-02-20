@@ -1,10 +1,3 @@
-//
-//  KeychainStorage.swift
-//  Blueprint
-//
-//  Created by Dino Trnka on 18. 2. 2021..
-//
-
 import Foundation
 import SwiftKeychainWrapper
 

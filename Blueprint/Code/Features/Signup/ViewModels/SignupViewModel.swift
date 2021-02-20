@@ -1,10 +1,3 @@
-//
-//  SignupViewModel.swift
-//  Blueprint
-//
-//  Created by Dino Trnka on 19. 2. 2021..
-//
-
 import Foundation
 
 class SignupViewModel: ObservableObject, APIRequestDelegate {

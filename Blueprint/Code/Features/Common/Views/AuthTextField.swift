@@ -1,10 +1,3 @@
-//
-//  AuthTextField.swift
-//  Blueprint
-//
-//  Created by Dino Trnka on 20. 2. 2021..
-//
-
 import SwiftUI
 
 struct AuthTextField: View {

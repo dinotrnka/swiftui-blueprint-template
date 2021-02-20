@@ -1,10 +1,3 @@
-//
-//  APIError.swift
-//  Blueprint
-//
-//  Created by Dino Trnka on 19. 2. 2021..
-//
-
 import Foundation
 
 enum APIError: String, Error {

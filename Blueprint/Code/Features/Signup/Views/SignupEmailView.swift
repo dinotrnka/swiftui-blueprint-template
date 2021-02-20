@@ -1,10 +1,3 @@
-//
-//  SignupView.swift
-//  Blueprint
-//
-//  Created by Dino Trnka on 19. 2. 2021..
-//
-
 import SwiftUI
 
 struct SignupEmailView: View {
