@@ -28,3 +28,6 @@
 "Signup.EmailTitle" = "Please enter your email.";
 "Signup.EmailField" = "Email";
 "Signup.ContinueButtonTitle" = "Continue";
+
+/* MAIN */
+"Main.LogoutButtonTitle" = "Logout";

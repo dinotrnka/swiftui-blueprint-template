@@ -20,13 +20,12 @@ struct SignupUsernameView: View {
                 .modifier(AuthTitle())
 
             Spacer()
-                .frame(height: 25)
+                .frame(height: 50)
 
-            TextField(
-                "Signup.UsernameField".localized,
+            AuthTextField(
+                title: "Signup.UsernameField".localized,
                 text: $viewModel.username
             )
-                .modifier(AuthTextField())
 
             Spacer()
 
@@ -36,10 +35,11 @@ struct SignupUsernameView: View {
                 )
             ) {
                 Text("Signup.ContinueButtonTitle".localized)
-                    .modifier(OvalButton())
+                    .modifier(MainButton())
             }
         }
         .padding(30)
+        .modifier(Screen())
     }
 }
 

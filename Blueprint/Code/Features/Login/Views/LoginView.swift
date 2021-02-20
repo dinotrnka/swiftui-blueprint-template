@@ -16,23 +16,29 @@ struct LoginView: View {
 
             Spacer()
 
-            VStack(spacing: 20) {
-                TextField("Login.UsernameField".localized, text: $viewModel.username)
-                    .modifier(AuthTextField())
+            VStack(spacing: 40) {
+                AuthTextField(
+                    title: "Login.UsernameField".localized,
+                    text: $viewModel.username
+                )
 
-                SecureField("Login.PasswordField".localized, text: $viewModel.password)
-                    .modifier(AuthTextField())
+                AuthTextField(
+                    title: "Login.PasswordField".localized,
+                    text: $viewModel.password,
+                    secure: true
+                )
             }
 
             Spacer()
 
             Button(action: viewModel.login, label: {
                 Text("Login.LoginButtonTitle".localized)
-                    .modifier(OvalButton())
+                    .modifier(MainButton())
             })
 
         }
         .padding(30)
+        .modifier(Screen())
     }
 }
 

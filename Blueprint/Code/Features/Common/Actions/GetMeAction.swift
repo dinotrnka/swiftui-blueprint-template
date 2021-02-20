@@ -1,10 +1,6 @@
 import Foundation
 
 struct GetMeResponse: Decodable {
-    let data: GetMeResponseData
-}
-
-struct GetMeResponseData: Decodable {
     let user: User
 }
 
@@ -12,12 +8,6 @@ struct User: Codable {
     let id: Int
     let username: String
     let email: String
-    let isEmailVerified: Bool
-    var birthDate: String?
-    var gender: String?
-    var height: Double?
-    var weight: Double?
-    var createdAt: String?
 }
 
 struct GetMeAction {
@@ -26,7 +16,16 @@ struct GetMeAction {
     let route: String = "/me/"
     let method: HTTPMethod = .get
 
-    func call(completion: @escaping (GetMeResponseData) -> Void) {
+    func call(completion: @escaping (GetMeResponse) -> Void) {
+
+        if Mock.shared.isEnabled {
+            completion(GetMeResponse(user: User(
+                id: 1,
+                username: "user",
+                email: "user@sample.com"
+            )))
+        }
+
         APIRequest<EmptyRequest, GetMeResponse>.call(
             delegate,
             route: route,
@@ -38,7 +37,7 @@ struct GetMeAction {
                     GetMeResponse.self,
                     from: data
                 )
-                completion(response.data)
+                completion(response)
             } catch {
                 delegate?.onError(error: APIError.jsonDecoder)
             }

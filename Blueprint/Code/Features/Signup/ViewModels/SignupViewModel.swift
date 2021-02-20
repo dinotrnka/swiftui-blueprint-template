@@ -14,12 +14,6 @@ class SignupViewModel: ObservableObject, APIRequestDelegate {
     @Published var email: String = ""
 
     func signup() {
-        print("SIGNUP")
-        print(" ")
-        print("USERNAME", username)
-        print("PASSWORD", password)
-        print("EMAIL", email)
-
         SignupAction(
             delegate: self,
             parameters: SignupRequest(
@@ -28,7 +22,10 @@ class SignupViewModel: ObservableObject, APIRequestDelegate {
                 email: email
             )
         ).call { response in
-            print("Login response")
+            Auth.shared.setCredentials(
+                accessToken: response.accessToken,
+                refreshToken: response.refreshToken
+            )
         }
     }
 

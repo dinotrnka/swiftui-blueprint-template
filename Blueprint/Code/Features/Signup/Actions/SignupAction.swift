@@ -7,7 +7,8 @@ struct SignupRequest: Encodable {
 }
 
 struct SignupResponse: Decodable {
-    let success: Bool
+    let accessToken: String
+    let refreshToken: String
 }
 
 struct SignupAction {
@@ -18,6 +19,14 @@ struct SignupAction {
     let method: HTTPMethod = .post
 
     func call(completion: @escaping (SignupResponse) -> Void) {
+
+        if Mock.shared.isEnabled {
+            return completion(SignupResponse(
+                accessToken: "accessToken",
+                refreshToken: "refreshToken"
+            ))
+        }
+
         APIRequest<SignupRequest, SignupResponse>.call(
             delegate,
             route: route,

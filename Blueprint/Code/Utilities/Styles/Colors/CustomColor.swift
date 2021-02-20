@@ -3,34 +3,38 @@ import SwiftUI
 class CustomColor {
 
     static var background: Color {
-        dynamic(light: .lightBeige, dark: .darkModeBlue)
+        dynamic(light: .white, dark: .thunder)
     }
 
     static var primary: Color {
-        dynamic(light: .orange)
+        dynamic(light: .purple, dark: .orange)
     }
 
     static var secondary: Color {
-        dynamic(light: .green)
+        dynamic(light: .red, dark: .akaroa)
+    }
+
+    static var danger: Color {
+        dynamic(light: .red, dark: .akaroa)
     }
 
     static var text: Color {
-        dynamic(light: .darkBlue, dark: .red)
+        dynamic(light: .purple, dark: .orange)
     }
 
-    static var textLight: Color {
-        dynamic(light: .white)
+    static var buttonText: Color {
+        dynamic(light: .white, dark: .thunder)
     }
 
     static var border: Color {
-        dynamic(light: .lightMidGray)
+        dynamic(light: .purple, dark: .orange)
     }
 
     static var gradient: Gradient {
         Gradient(colors: [
-            dynamic(light: .tumbleweed),
-            dynamic(light: .africanViolet),
-            dynamic(light: .liberty)
+            dynamic(light: .shark),
+            dynamic(light: .red),
+            dynamic(light: .white)
         ])
     }
 }

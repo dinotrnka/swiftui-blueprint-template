@@ -20,20 +20,22 @@ struct SignupEmailView: View {
                 .modifier(AuthTitle())
 
             Spacer()
-                .frame(height: 25)
+                .frame(height: 50)
 
-            TextField(
-                "Signup.EmailField".localized,
+            AuthTextField(
+                title: "Signup.EmailField".localized,
                 text: $viewModel.email
             )
-                .modifier(AuthTextField())
 
             Spacer()
 
-            Text("Signup.ContinueButtonTitle".localized)
-                .modifier(OvalButton())
+            Button(action: viewModel.signup, label: {
+                Text("Signup.ContinueButtonTitle".localized)
+                    .modifier(MainButton())
+            })
         }
         .padding(30)
+        .modifier(Screen())
     }
 }
 

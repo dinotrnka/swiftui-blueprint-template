@@ -13,18 +13,16 @@ class LoginViewModel: ObservableObject, APIRequestDelegate {
     @Published var password: String = ""
     
     func login() {
-        print("LOGIN")
-        print(" ")
-        print("USERNAME", username)
-        print("PASSWORD", password)
-        
         LoginAction(
             delegate: self,
             parameters: LoginRequest(
                 username: username,
                 password: password
             )).call { response in
-                print("Login response")
+                Auth.shared.setCredentials(
+                    accessToken: response.accessToken,
+                    refreshToken: response.refreshToken
+                )
             }
     }
     

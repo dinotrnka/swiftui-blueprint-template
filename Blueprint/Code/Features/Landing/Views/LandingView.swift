@@ -7,7 +7,7 @@ struct LandingView: View {
 
             NavigationLink(destination: SignupUsernameView()) {
                 Text("Landing.SignupButtonTitle".localized)
-                    .modifier(OvalButton())
+                    .modifier(MainButton(color: CustomColor.secondary))
             }
 
             Spacer()
@@ -15,10 +15,11 @@ struct LandingView: View {
 
             NavigationLink(destination: LoginView()) {
                 Text("Landing.LoginButtonTitle".localized)
-                    .modifier(OvalButton())
+                    .modifier(MainButton())
             }
         }
         .padding(30)
+        .modifier(Screen())
     }
 }
 

@@ -12,9 +12,10 @@ class Auth: ObservableObject {
 
     private let storage: KeychainStorage = KeychainWrapper.standard
 
-    func logout() {
-        storage.removeObject(for: .accessToken)
-        storage.removeObject(for: .refreshToken)
+    @Published var loggedIn: Bool = false
+
+    private init() {
+        loggedIn = hasAccessToken()
     }
 
     func getCredentials() -> Credentials {
@@ -27,6 +28,7 @@ class Auth: ObservableObject {
     func setCredentials(accessToken: String, refreshToken: String) {
         storage.set(accessToken, for: .accessToken)
         storage.set(refreshToken, for: .refreshToken)
+        loggedIn = true
     }
 
     func hasAccessToken() -> Bool {
@@ -39,6 +41,12 @@ class Auth: ObservableObject {
 
     func getRefreshToken() -> String? {
         return getCredentials().refreshToken
+    }
+
+    func logout() {
+        storage.removeObject(for: .accessToken)
+        storage.removeObject(for: .refreshToken)
+        loggedIn = false
     }
 
     func validate(accessToken: String) -> Bool {

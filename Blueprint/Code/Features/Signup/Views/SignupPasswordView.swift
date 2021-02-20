@@ -20,13 +20,13 @@ struct SignupPasswordView: View {
                 .modifier(AuthTitle())
 
             Spacer()
-                .frame(height: 25)
+                .frame(height: 50)
 
-            SecureField(
-                "Signup.PasswordField".localized,
-                text: $viewModel.password
+            AuthTextField(
+                title: "Signup.PasswordField".localized,
+                text: $viewModel.password,
+                secure: true
             )
-                .modifier(AuthTextField())
 
             Spacer()
 
@@ -36,10 +36,11 @@ struct SignupPasswordView: View {
                 )
             ) {
                 Text("Signup.ContinueButtonTitle".localized)
-                    .modifier(OvalButton())
+                    .modifier(MainButton())
             }
         }
         .padding(30)
+        .modifier(Screen())
     }
 }
 
