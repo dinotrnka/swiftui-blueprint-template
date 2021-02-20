@@ -16,8 +16,6 @@ struct MainView: View {
                     .modifier(MainButton(color: CustomColor.danger))
             }
 
-            Spacer()
-
         }
         .padding(30)
         .modifier(Screen())
