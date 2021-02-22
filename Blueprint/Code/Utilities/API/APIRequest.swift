@@ -31,7 +31,7 @@ struct APIRequest<Parameters: Encodable, Model: Decodable> {
             return
         }
 
-        let url = "https://" + Configuration.get(.baseUrl) + route
+        let url = Configuration.get(.baseUrl) + route
 
         guard let urlComponent = URLComponents(string: url),
               let usableUrl = urlComponent.url else {

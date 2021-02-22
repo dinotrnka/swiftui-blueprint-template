@@ -1,2 +1,2 @@
 ENVIRONMENT = staging
-BASE_URL = dev-stg.blueprint.com
+BASE_URL = https:/$()/dev-stg.blueprint.com

@@ -1,2 +1,2 @@
 ENVIRONMENT = production
-BASE_URL = dev.blueprint.com
+BASE_URL = https:/$()/dev.blueprint.com

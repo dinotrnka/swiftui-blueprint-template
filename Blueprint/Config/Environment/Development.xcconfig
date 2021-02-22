@@ -1,2 +1,2 @@
 ENVIRONMENT = development
-BASE_URL = dev-api.blueprint.com
+BASE_URL = https:/$()/dev-api.blueprint.com
